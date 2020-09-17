@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <title>EVEngine</title>
+  </head>
+  <body>
+	<table>
+		<thead>
+			<th>QuestionID</th>
+			<th>Question</th>
+			<th>ChoiceA</th>
+			<th>ChoiceB</th>
+			<th>ChoiceC</th>
+			<th>ChoiceD</th>
+			<th>CChoice</th>
+		</thead>
+		{% for results in results %}
+			<tr>
+				<td>{{results["QuestionID"]}}</td>
+				<td>{{results["Question"]}}</td>
+				<td>{{results["ChoiceA"]}}</td>
+				<td>{{results["ChoiceB"]}}</td>
+				<td>{{results["ChoiceC"]}}</td>
+				<td>{{results["ChoiceD"]}}</td>
+				<td>{{results["CChoice"]}}</td>
+			</tr>
+		{% endfor %}
+	</table>
+  </body>
+</html>
